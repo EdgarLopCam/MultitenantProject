@@ -28,8 +28,8 @@ ApplicationDbContext.cs
 - Finally it will be necessary to execute the migrations :
 
 
-  dotnet ef database update --context ApplicationDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
-  dotnet ef database update --context ProductDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
+- dotnet ef database update --context ApplicationDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
+- dotnet ef database update --context ProductDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
 
 - The steps to use the API, first is to create a user and log in with that user and with the token we can authorize from Swagger, later you can create organizations, and then you can create products in the tenant that you created.
 
