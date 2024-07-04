@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1DNm40GrftwZCrqL05ZkBX1p/182NpjZNhmCwYCpD+A=",
+  "Source": "MyMultitenantApp.Api",
+  "BasePath": "_content/MyMultitenantApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
