@@ -13,16 +13,19 @@
 ## Settings
 modify the database connection string for the 2 databases, and keep the name of the databases :
 example :
+
   "ConnectionStrings": {
     "DefaultConnection": "Data Source=yourServer;Persist Security Info=False;Initial Catalog=ApplicationDb;User ID=yourId;Password=yourPassword;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
     "ProductConnection": "Data Source=yourServer;Persist Security Info=False;Initial Catalog=ProductDb_{tenant};User ID=yourId;Password=yourPassword;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
   },
+
+  
 By default the ApplicationDB database will be created with the following values ​​configured with EF :
 
 ApplicationDbContext.cs
    modelBuilder.Entity<Organization>().HasData(new Organization { Id = 1, Name = "Organization1", SlugTenant = "default_tenant" });
 
-finally it will be necessary to execute the migrations :
+Finally it will be necessary to execute the migrations :
   dotnet ef database update --context ApplicationDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
   dotnet ef database update --context ProductDbContext -p src/MyMultitenantApp.Persistence -s src/MyMultitenantApp.Api
 
